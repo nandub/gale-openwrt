@@ -32,6 +32,7 @@ endef
 
 define Build/Configure
 	(cd "$(PKG_BUILD_DIR)"; ./bootstrap );
+	$(call Build/Configure/Default)
 endef
 
 define Build/Compile
