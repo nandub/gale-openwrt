@@ -16,8 +16,6 @@ PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_MD5SUM:=9e1f9304596464850d847911c961a891
 
-PKG_FIXUP:=./bootstrap
-
 include $(INCLUDE_DIR)/package.mk
 
 define Package/gale
@@ -30,6 +28,10 @@ endef
 
 define Package/gale/description
 	Gale is a instant messaging software
+endef
+
+define Build/Configure
+	(cd "$(PKG_BUILD_DIR)"; ./bootstrap );
 endef
 
 define Build/Compile
