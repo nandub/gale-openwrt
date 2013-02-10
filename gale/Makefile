@@ -23,7 +23,7 @@ define Package/gale
  CATEGORY:=Application
  TITLE:=gale
  URL:=http://www.gale.org
- DEPENDS:=+adns
+ DEPENDS:=+adns +bdwgc
 endef
 
 define Package/gale/description

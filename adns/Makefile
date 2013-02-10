@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/adns
  SECTION:=libs
  CATEGORY:=Libraries
- TITLE:=adns
+ TITLE:=adns is a resolver library for C and C++ programs
  URL:=http://www.chiark.greenend.org.uk/~ian/adns
 endef
 
