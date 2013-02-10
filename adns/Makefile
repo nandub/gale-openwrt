@@ -31,7 +31,7 @@ endef
 
 define Package/adns/install
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/*.so* $(1)/usr/lib/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/*.a $(1)/usr/lib/
 endef
 
 define Package/adns/InstallDev
