@@ -29,11 +29,6 @@ define Package/adns/description
   adns is a resolver library for C and C++ programs, and a collection of useful DNS resolver utilities.
 endef
 
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ./src/* $(PKG_BUILD_DIR)/
-endef
-
 define Package/adns/install
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/*.so* $(1)/usr/lib/
