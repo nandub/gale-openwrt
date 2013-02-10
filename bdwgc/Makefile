@@ -23,6 +23,7 @@ define Package/bdwgc
  CATEGORY:=Libraries
  TITLE:=A garbage collector for C and C++
  URL:=http://www.hpl.hp.com/personal/Hans_Boehm/gc
+ DEPENDS:=+libpthread
 endef
 
 define Package/bdwgc/description                                                
