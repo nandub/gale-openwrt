@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/gale
  SECTION:=app
  CATEGORY:=Application
- TITLE:=gale
+ TITLE:=Gale is a instant messaging software
  URL:=http://www.gale.org
  DEPENDS:=+adns +bdwgc
 endef
