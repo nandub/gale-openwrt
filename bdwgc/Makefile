@@ -11,7 +11,7 @@ PKG_NAME:=bdwgc
 PKG_VERSION:=7.2d
 PKG_RELEASE:=1
 
-PKG_SOURCE_URL:=http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc-7.2d.tar.gz
+PKG_SOURCE_URL:=http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source
 PKG_SOURCE:=gc-$(PKG_VERSION).tar.gz
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_MD5SUM:=91340b28c61753a789eb6077675d87d2
