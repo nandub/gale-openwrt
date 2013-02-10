@@ -29,6 +29,11 @@ define Package/bdwgc/description
 	A garbage collector for C and C++
 endef
 
+define Build/Configure
+#	(cd "$(PKG_BUILD_DIR)"; ./autogen.sh );
+	$(call Build/Configure/Default)
+endef
+
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		BUILDCC="$(HOSTCC)" \
@@ -51,6 +56,7 @@ define Package/bdwgc/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/include/*.h $(1)/usr/include/
 	$(CP) $(PKG_INSTALL_DIR)/usr/include/gc/*.h $(1)/usr/include/gc/
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/* $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/share/* $(1)/usr/share/
 endef
 
 $(eval $(call BuildPackage,bdwgc))
