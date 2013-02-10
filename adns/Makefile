@@ -26,7 +26,7 @@ define Package/adns
 endef
 
 define Package/adns/description                                                
-  adns is a resolver library for C (and C++) programs, and a collection of useful DNS resolver utilities.
+  adns is a resolver library for C and C++ programs, and a collection of useful DNS resolver utilities.
 endef
 
 define Build/Prepare
