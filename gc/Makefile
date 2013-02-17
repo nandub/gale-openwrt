@@ -35,9 +35,9 @@ define Build/Configure
 	$(call Build/Configure/Default)
 endef
 
-CONFIGURE_ARGS+= \   
+CONFIGURE_ARGS+= \
 	--disable-debug \
-	--disable-dependency-tracking \     
+	--disable-dependency-tracking \
 	--enable-cplusplus
 
 define Build/Compile
