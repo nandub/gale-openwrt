@@ -35,16 +35,19 @@ define Build/Configure
 	$(call Build/Configure/Default)
 endef
 
+CONFIGURE_ARGS+= \   
+	--disable-debug \
+	--disable-dependency-tracking \     
+	--enable-cplusplus
+
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
-		BUILDCC="$(HOSTCC)" \
 		DESTDIR="$(PKG_INSTALL_DIR)"
 endef
 
-define Build/InstallDev 
+define Build/Install
 	$(MAKE) -C $(PKG_BUILD_DIR) \
-		BUILDCC="$(HOSTCC)" \
-		DESTDIR="$(1)" \
+		DESTDIR="$(PKG_INSTALL_DIR)" \
 		install
 endef
 
