@@ -31,7 +31,7 @@ define Package/gc/description
 endef
 
 define Build/Configure
-#	(cd "$(PKG_BUILD_DIR)"; ./autogen.sh );
+	(cd "$(PKG_BUILD_DIR)"; ./autogen.sh );
 	$(call Build/Configure/Default)
 endef
 
