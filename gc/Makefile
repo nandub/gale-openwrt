@@ -9,11 +9,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gc
 PKG_VERSION:=7.2d
+_PKG_VERSION=7.2
 PKG_RELEASE:=1
 
 PKG_SOURCE_URL:=http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(_PKG_VERSION)
 PKG_MD5SUM:=91340b28c61753a789eb6077675d87d2
 
 include $(INCLUDE_DIR)/package.mk
