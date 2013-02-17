@@ -24,7 +24,7 @@ define Package/gc
  CATEGORY:=Libraries
  TITLE:=A garbage collector for C and C++
  URL:=http://www.hpl.hp.com/personal/Hans_Boehm/gc
- DEPENDS:=+libstdc++ +libpthread
+ DEPENDS:=+libpthread
 endef
 
 define Package/gc/description                                                
