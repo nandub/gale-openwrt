@@ -37,15 +37,13 @@ endef
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
-		BUILDCC="$(HOSTCC)" \
 		DESTDIR="$(PKG_INSTALL_DIR)" \
 		all
 endef
 
-define Build/InstallDev 
+define Build/Install
 	$(MAKE) -C $(PKG_BUILD_DIR) \
-		BUILDCC="$(HOSTCC)" \
-		DESTDIR="$(1)" \ 
+		DESTDIR="$(PKG_INSTALL_DIR)" \ 
 		install
 endef
 
