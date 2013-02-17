@@ -40,6 +40,9 @@ CONFIGURE_ARGS+= \
 	--disable-dependency-tracking \
 	--enable-cplusplus
 
+CONFIGURE_VARS+= \
+	ac_cv_lib_gc_GC_malloc=yes
+
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		DESTDIR="$(PKG_INSTALL_DIR)"
