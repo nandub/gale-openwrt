@@ -38,8 +38,7 @@ endef
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		BUILDCC="$(HOSTCC)" \
-		DESTDIR="$(PKG_INSTALL_DIR)" \
-		all
+		DESTDIR="$(PKG_INSTALL_DIR)"
 endef
 
 define Build/InstallDev 
