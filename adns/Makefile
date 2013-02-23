@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/adns
  SECTION:=libs
  CATEGORY:=Libraries
- TITLE:=adns is a resolver library for C and C++ programs
+ TITLE:=DNS resolver library for C and C++ programs
  URL:=http://www.chiark.greenend.org.uk/~ian/adns
 endef
 
@@ -30,14 +30,11 @@ define Package/adns/description
 endef
 
 define Package/adns/install
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/*.a $(1)/usr/lib/
-endef
-
-define Package/adns/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/*.h $(1)/usr/include/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/*.o $(1)/usr/lib/
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/libadns.a $(1)/usr/lib/
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/src/adns.h $(1)/usr/include/
+
 endef
 
 $(eval $(call BuildPackage,adns))
