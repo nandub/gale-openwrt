@@ -23,7 +23,7 @@ define Package/gale
  CATEGORY:=Application
  TITLE:=Secure Instant Messaging Software
  URL:=http://www.gale.org
- DEPENDS:=+adns +gc
+ DEPENDS:=+adns +gc +libopenssl
 endef
 
 define Package/gale/description
