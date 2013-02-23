@@ -36,8 +36,8 @@ define Build/Configure
 endef
 
 CONFIGURE_VARS+= \
-	CPFLAGS=-I$(STAGING_DIR)/usr/include \
-	LDFLAGS=-L$(STAGING_DIR)/usr/lib
+	CPFLAGS=-I$(STAGING_DIR_ROOT)/usr/include -I$(STAGING_DIR)/usr/include \
+	LDFLAGS=-L$(STAGING_DIR_ROOT)/usr/lib -L$(STAGING_DIR)/usr/lib
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
