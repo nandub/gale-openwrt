@@ -36,8 +36,8 @@ define Build/Configure
 endef
 
 CONFIGURE_VARS+= \
-	ac_cv_lib_gc_GC_malloc=yes \
-	ac_cv_lib_adns_adns_init=yes
+	CPFLAGS=$(TARGET_CPFLAGS) \
+	LDFLAGS=$(TARGET_LDFLAGS)
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
