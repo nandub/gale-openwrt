@@ -35,6 +35,10 @@ define Build/Configure
 	$(call Build/Configure/Default)
 endef
 
+TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include
+TARGET_CPFLAGS += -I$(STAGING_DIR)/usr/include
+TARGET_LDFLAGS += -L$(STAGING_DIR)/lib -L$(STAGING_DIR)/usr/lib
+
 CONFIGURE_VARS+= \
 	CPFLAGS=$(TARGET_CPFLAGS) \
 	LDFLAGS=$(TARGET_LDFLAGS)
